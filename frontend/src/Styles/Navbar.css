@@ -1,0 +1,61 @@
+/* Navbar Styles */
+.navbar {
+    position: fixed;         /* Fixes the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;  /* Background color */
+    color: white;            /* Text color */
+    padding: 10px 0;         /* Padding to space out navbar items */
+    z-index: 1000;           /* Ensures navbar is on top of other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow to navbar */
+  }
+  
+  /* Navbar Links */
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Logout Button */
+  .logout1-btn {
+    position: absolute;
+    right: 20px;  /* Aligns the logout button to the right */
+    top: 50%;     /* Vertically centers the button */
+    transform: translateY(-50%);
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .logout-btn:hover {
+    background-color: darkred;
+  }
+  
+  /* Content Styling */
+  body {
+    padding-top: 60px;  /* Ensure content isn't hidden behind the navbar */
+  }
+  

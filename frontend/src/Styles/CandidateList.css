@@ -1,0 +1,231 @@
+/* Enhanced Candidate List Styles */
+.candidate-list {
+    width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background Effect */
+.candidate-list::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,75,75,0.1), transparent);
+    animation: animateBg 8s linear infinite;
+    z-index: 1;
+}
+
+@keyframes animateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.candidate-list h1 {
+    font-size: 3rem;
+    color: #ff4b4b;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(255,75,75,0.5);
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhanced Add Button */
+.add-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ff4b4b, #b30000);
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.add-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.add-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.add-button:hover::before {
+    left: 100%;
+}
+
+/* Enhanced Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Modern Card Design */
+.candidate-card  {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,75,75,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.candidate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+    border-color: rgba(255,75,75,0.4);
+}
+
+/* Image Hover Effect */
+.candidate-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ff4b4b;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255,75,75,0.3);
+}
+
+.candidate-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,75,75,0.5);
+}
+
+/* Name Styling */
+.candidate-card h3 {
+    font-size: 1.6rem;
+    color: #ff4b4b;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255,75,75,0.3);
+}
+
+/* Details Styling */
+.candidate-card p {
+    font-size: 1.1rem;
+    color: #e6e6e6;
+    margin: 8px 0;
+    padding: 8px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+}
+
+/* Enhanced Button Group */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.details-button,
+.edit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    z-index: 1; /* Ensures the button is above pseudo-elements */
+}
+
+/* Fix the pseudo-element */
+.details-button::before,
+.edit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    pointer-events: none; /* This ensures it does not interfere with clicking */
+}
+
+.details-button:hover::before,
+.edit-button:hover::before {
+    left: 100%;
+}
+
+
+/* Error Message Animation */
+.error {
+    color: #ff4b4b;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: errorPulse 1.5s infinite;
+}
+
+@keyframes errorPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Responsive Enhancements */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+    }
+    
+    .candidate-card {
+        padding: 30px;
+    }
+    
+    .candidate-image {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Hover Effects */
+.candidate-card:hover::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,75,75,0.1), transparent);
+    animation: animateCard 6s linear infinite;
+}
+
+@keyframes animateCard {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

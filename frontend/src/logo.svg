@@ -1,0 +1,5 @@
+function Header() {
+  return <img src="/my-logo.png" alt="Website Logo" width="100" />;
+}
+
+export default Header;

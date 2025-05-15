@@ -1,0 +1,63 @@
+.application-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.application-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.application-container div {
+    margin-bottom: 15px;
+}
+
+.application-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.application-container input,
+.application-container select,
+.application-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.application-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.application-container button:hover {
+    background-color: #45a049;
+}
+
+.alert {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #4CAF50;
+}

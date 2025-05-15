@@ -1,0 +1,77 @@
+.home-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 700px;
+    background: linear-gradient(145deg, #f9f9f9, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;  /* Ensures nothing overlays it */
+    z-index: 1;
+}
+
+.home-title {
+    font-size: 2.8rem;
+    color: #ff0808;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.home-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures buttons adjust on smaller screens */
+    gap: 20px;
+    position: relative; /* Fix potential overlay issues */
+    z-index: 2; /* Ensures buttons stay clickable */
+}
+
+.home-btn, .login-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded button style */
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    min-width: 150px; /* Ensures consistent button width */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensures button remains interactive */
+    z-index: 3; /* Fix: Keeps it above other elements */
+}
+
+.home-btn {
+    background: #007bff;
+}
+
+.home-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn {
+    background: #28a745;
+}
+
+.login-btn:hover {
+    background: #218838;
+    transform: scale(1.05); /* Matches hover effect of home-btn */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}

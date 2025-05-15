@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000000; /* Solid black background */
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 800px;
+    width: 100%;
+    background: #1a1a1a; /* Dark container background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    margin: 20px auto;
+}
+
+/* Dashboard Heading */
+.dashboard-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff4500;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Error Message */
+.error {
+    text-align: center;
+    background: #4d0000;
+    color: #ff4500;
+    border: 1px solid #ff6347;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Applications List */
+/* Applications List */
+.applications-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 boxes per row */
+    gap: 20px; /* Space between the boxes */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Individual Application Box */
+.application-box {
+    background: #262626; /* Dark gray background for each box */
+    border: 1px solid #ff4500;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.application-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+/* Job Title */
+.application-box h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #ff5733;
+}
+
+/* Job Status Highlight */
+.application-box .status {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Status Color Coding */
+.status.pending {
+    background: #ff9800; /* Orange for pending */
+}
+
+.status.approved,
+.status.accepted {
+    background: #4caf50; /* Green for approved or accepted */
+}
+
+.status.rejected {
+    background: #f44336; /* Red for rejected */
+}
+
+/* No Applications Found */
+.no-applications {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff4500;
+    margin-top: 20px;
+}
+
+/* Responsive Design for Desktop */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .dashboard-container h1 {
+        font-size: 2rem;
+    }
+
+    .application-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .status {
+        font-size: 1rem;
+    }
+}

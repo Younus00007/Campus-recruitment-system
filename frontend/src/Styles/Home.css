@@ -1,0 +1,257 @@
+/* Enhanced Home Page Styles */
+.home-container {
+    max-width: 1900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background Effect */
+.home-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,77,77,0.1), transparent);
+    animation: animateBg 8s linear infinite;
+    z-index: 1;
+}
+
+@keyframes animateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hero Section Enhancements */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(145deg, #ff4d4d, #e60000);
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(0,0,0,0.3);
+    animation: textFloat 3s ease-in-out infinite;
+}
+
+@keyframes textFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Features Section Enhancements */
+.features-section {
+    position: relative;
+    z-index: 2;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.features-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #ff4d4d;
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(26, 26, 26, 0.9);
+    border: 1px solid #ff4d4d;
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,77,77,0.1), transparent);
+    animation: animateCard 6s linear infinite;
+}
+
+@keyframes animateCard {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(255, 77, 77, 0.3);
+}
+
+.feature-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #ff6666;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Testimonials Enhancements */
+.testimonials-section {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: rgba(26, 26, 26, 0.9);
+    border: 1px solid #ff4d4d;
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card::before {
+    content: '“';
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-size: 4rem;
+    color: rgba(255,77,77,0.3);
+    font-family: serif;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.2);
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+    font-size: 1.3rem;
+    color: #ff6666;
+    margin: 0;
+}
+
+/* Footer Enhancements */
+.home-footer {
+    background: linear-gradient(145deg, #1a1a1a, #000);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 2;
+    border-top: 2px solid #ff4d4d;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+}
+
+.home-footer p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+    
+    .features-section h2,
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding: 15px;
+    }
+    
+    .hero-section {
+        padding: 40px 15px;
+    }
+    
+    .feature-card,
+    .testimonial-card {
+        padding: 20px;
+    }
+}
+
+/* Additional Animations */
+@keyframes gradientPulse {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

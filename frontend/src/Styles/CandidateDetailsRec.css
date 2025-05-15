@@ -1,0 +1,227 @@
+/* Base Container Styling */
+.candidate-details-rec {
+    max-width: 1200px;
+    margin: 50px auto;
+    width: 1000px;
+    padding: 40px;
+    background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Glowing Border for Container */
+.candidate-details-rec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid rgba(255, 75, 75, 0.7);
+    border-radius: 20px;
+    z-index: -1;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        border-color: rgba(255, 75, 75, 0.5);
+    }
+    100% {
+        border-color: rgba(255, 75, 75, 1);
+    }
+}
+
+/* Title Styling */
+.candidate-details-rec h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #ff4b4b;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 20px rgba(255, 75, 75, 0.8);
+}
+
+/* Section Styling */
+.details-card h3 {
+    font-size: 2.5rem;
+    color: #ff4b4b;
+    margin-top: 40px;
+    border-bottom: 3px solid #ff4b4b;
+    padding-bottom: 12px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.details-card p {
+    font-size: 1.3rem;
+    color: #e6e6e6;
+    margin: 15px 0;
+    line-height: 1.8;
+    transition: all 0.3s ease;
+}
+
+.details-card p:hover {
+    color: #ff4b4b;
+    transform: translateX(5px);
+}
+
+/* Background for All Details */
+.details-card p.reg-no,
+.details-card p.dob,
+.details-card p.year-of-passing,
+.details-card p.cgpa,
+.details-card p.phone,
+.details-card p.address,
+.details-card p.email {
+    background: linear-gradient(135deg, #ff4b4b, #b30000);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 20px 0;
+    display: inline-block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* List Styling */
+.details-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.details-card ul li {
+    background: rgba(255, 75, 75, 0.2);
+    margin: 12px 0;
+    padding: 18px 25px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: #ff4b4b;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.details-card ul li:hover {
+    background: rgba(255, 75, 75, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Candidate Image Container (Right Side) */
+.candidate-image-container {
+    position: relative;
+    margin-left: 40px;
+}
+
+/* Candidate Image Styling */
+.candidate-image {
+    max-width: 350px; /* Increased image size */
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #ff4b4b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Red Glow on Hover */
+.candidate-image:hover {
+    transform: scale(1.15); /* Slightly enlarge the image on hover */
+    box-shadow: 0 0 20px 8px rgba(255, 0, 0, 0.8); /* Red glow effect */
+    border-color: #ff4b4b; /* Add glow to border */
+}
+
+/* Resume Button Styling */
+.download-resume-button {
+    background: linear-gradient(135deg, #ff4b4b, #b30000);
+    color: #fff;
+    padding: 18px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 35px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.download-resume-button:hover {
+    background: linear-gradient(135deg, #b30000, #7a0000);
+    box-shadow: 0 9px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px);
+}
+
+/* No Resume Available */
+.no-resume {
+    font-size: 1.2rem;
+    color: #ff4b4b;
+    font-weight: 600;
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff4b4b, #b30000);
+    color: #fff;
+    padding: 18px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 35px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #b30000, #7a0000);
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Desktop View Specific Styling */
+@media (min-width: 1024px) {
+    .candidate-details-rec {
+        padding: 60px;
+    }
+
+    .candidate-details-rec h1 {
+        font-size: 4rem;
+    }
+
+    .details-card h3 {
+        font-size: 2.8rem;
+    }
+
+    .details-card p {
+        font-size: 1.4rem;
+    }
+
+    .details-card ul li {
+        font-size: 1.3rem;
+        padding: 20px 30px;
+    }
+
+    .download-resume-button {
+        font-size: 1.3rem;
+        padding: 20px 35px;
+    }
+
+    .back-button {
+        font-size: 1.3rem;
+        padding: 20px 35px;
+    }
+}

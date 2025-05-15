@@ -1,0 +1,25 @@
+.dashboard-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+.dashboard-container h2 {
+    color: #343a40;
+}
+
+.dashboard-container p {
+    color: #6c757d;
+}
+
+.dashboard-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dashboard-container button:hover {
+    background-color: #0056b3;
+}

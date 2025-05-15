@@ -1,0 +1,118 @@
+/* Register Page Container */
+.register-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    font-family: 'Arial', sans-serif;
+    color: #f4f4f4;
+}
+
+/* Page Heading */
+.register-heading {
+    text-align: center;
+    font-size: 26px;
+    color: #ff4500;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.register-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+.register-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f4f4f4;
+    margin-bottom: 8px;
+}
+
+/* Input Fields */
+.register-input,
+.register-select {
+    padding: 12px;
+    font-size: 16px;
+    color: #f4f4f4;
+    background: #262626;
+    border: 1px solid #ff4500;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.register-input:focus,
+.register-select:focus {
+    outline: none;
+    border-color: #ff5733;
+    box-shadow: 0 0 6px rgba(255, 87, 51, 0.8);
+    background-color: #333333;
+}
+
+/* Submit Button */
+.register-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.register-button:hover {
+    background-color: #b20710;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Alerts */
+.register-alert {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.alert-error {
+    background-color: #4d0000;
+    color: #ff4500;
+    border: 1px solid #ff6347;
+}
+
+.alert-success {
+    background-color: #1c1c1c;
+    color: #00c853;
+    border: 1px solid #00e676;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    .register-container {
+        padding: 20px;
+    }
+    .register-heading {
+        font-size: 22px;
+    }
+    .register-input,
+    .register-select,
+    .register-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
